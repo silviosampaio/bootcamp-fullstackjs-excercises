@@ -1,0 +1,52 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /*body {
+    background-color: blueviolet !important;
+  }*/
+
+  #product-price {
+    zoom: 1.4;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up)  */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /*body {
+    background-color: orange !important;
+  }*/
+
+  #product-price {
+    zoom: 1.4;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)  */
+@media (max-width: 991.98px) {
+  /*body {
+    background-color: red;
+  }*/
+
+  #menu-master {
+    justify-content: center !important;
+    zoom: 1.4;
+  }
+
+  #menu-master li:not(.menu-active) {
+    display: none;
+  }
+}
+
+/* Large devices (desktops, 992px and up)  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /*body {
+    background-color: blue;
+  }*/
+}
+
+/* Extra large devices (large desktops, 1200px and up)  */
+@media (min-width: 1200px) {
+  /* SILENCE IS GOLDEN */
+  /*body {
+    background-color: green;
+  }*/
+}

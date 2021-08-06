@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar</title>
+  </head>
+  <body></body>
+  <script>
+    // document.createElement(element)
+    const $box = document.createElement('div');
+    // <div></div>
+
+    $box.style.backgroundColor = 'red';
+    $box.style.width = '200px';
+    $box.style.height = '200px';
+    $box.style.padding = '20px';
+
+    $box.setAttribute('contentEditable', true);
+    $box.setAttribute('id', 'box');
+
+    $box.innerHTML = `<h1>Meu Conteúdo</h1>`;
+
+    document.body.appendChild($box);
+
+    /// SUBSTITUIR
+    const $boxParent = document.getElementById('box').parentNode;
+    /*const $span = document.createElement('span');
+    $span.innerText = 'Span Teste';
+
+    setTimeout(() => {
+      $boxParent.replaceChild($span, $box);
+    }, 3 * 1000);*/
+
+    //$boxParent.prepend(document.createTextNode('Texto antes '));
+
+    document.write('Meu texto');
+  </script>
+</html>

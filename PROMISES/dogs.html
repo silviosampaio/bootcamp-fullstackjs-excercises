@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dogs</title>
+  </head>
+  <body>
+    <h1 id="loading"></h1>
+    <div id="dogs"></div>
+    <input type="number" value="4" placeholder="Quantidade" id="qtd" />
+    <button id="loadmore">Carregar mais</button>
+  </body>
+  <script>
+    const $loadmoreButton = document.getElementById('loadmore');
+    const $qtdInput = document.getElementById('qtd');
+    const $loadLabel = document.getElementById('loading');
+
+    const loadDogs = (qtd) => {
+      return new Promise((resolve, reject) => {
+        $loadLabel.innerText = `Carregando ${qtd} imagens...`;
+
+        fetch(`https://dog.ceo/api/breeds/image/random/${qtd}`)
+          .then((data) => data.json())
+          .then((json) => resolve(json.message))
+          .catch((err) => reject(err));
+      });
+    };
+
+    const getDogs = (qtd) => {
+      loadDogs(qtd)
+        .then((dogs) => addDogs(dogs))
+        .catch((err) => console.log(err));
+    };
+
+    const addDogs = (dogs) => {
+      const $dogsContainer = document.getElementById('dogs');
+      for (let dog of dogs) {
+        const $image = document.createElement('img');
+        $image.src = dog;
+        $image.style.width = '100px';
+        $image.style.height = '100px';
+
+        $dogsContainer.appendChild($image);
+      }
+
+      $loadLabel.innerText = 'Imagens Carregadas';
+    };
+
+    getDogs(4);
+    $loadmoreButton.addEventListener('click', () => {
+      getDogs($qtdInput.value);
+    });
+  </script>
+</html>

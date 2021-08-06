@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body></body>
+  <script>
+    /*// ASSÍNCRINO
+    setTimeout(() => {
+      console.log('Primeiro');
+    }, 0);
+
+    // SINCRONO
+    console.log('Segundo');
+
+    // ASSÍNCRINO
+    setTimeout(() => {
+      console.log('Terceiro');
+    }, 0);
+
+    // SINCRONO
+    console.log('Quarto');*/
+
+    const tarefaAssincrona = (number) => {
+      return new Promise((resolve, reject) => {
+        // TAREFA ASSÍNCRONA
+        setTimeout(() => {
+          if (number > 10) {
+            resolve('Número é maior que 10');
+          } else {
+            reject('Número não é maior que 10');
+          }
+        }, 5000);
+      });
+    };
+
+    tarefaAssincrona(15)
+      .then((restult) => {
+        console.log(restult);
+      })
+      .catch((restult) => {
+        console.error(restult);
+      });
+  </script>
+</html>

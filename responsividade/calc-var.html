@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Var</title>
+    <style>
+      :root {
+        --width: 100%;
+        --red: red;
+        --green: green;
+        --border-radius: 10px;
+        --valor: 100px;
+        --metade: calc(var(--valor) / 2);
+        --quarto: calc(var(--metade) / 2);
+      }
+
+      .tamanho-total {
+        width: var(--width);
+        background: var(--red);
+        height: var(--valor);
+      }
+
+      .tamanho-metade {
+        width: calc(var(--width) / 2);
+        background: var(--green);
+        height: var(--valor);
+        margin-top: var(--valor);
+      }
+
+      .tamanho-quarto {
+        width: var(--quarto);
+        background: var(--red);
+        height: var(--valor);
+        margin-top: var(--valor);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tamanho-total red"></div>
+    <div class="tamanho-metade green"></div>
+    <div class="tamanho-quarto green"></div>
+  </body>
+</html>

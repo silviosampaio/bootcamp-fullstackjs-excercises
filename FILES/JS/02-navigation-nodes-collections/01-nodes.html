@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent, Child, Sibling</title>
+  </head>
+  <body>
+    <ul id="lista">
+      <li>Maçã</li>
+      <li><p id="fruta2">Pêra</p></li>
+      <li>Melancia</li>
+    </ul>
+    <script>
+      const lista = document.getElementById('lista');
+
+      console.log(lista.nodeName);
+      console.log(lista.nodeType);
+    </script>
+  </body>
+</html>

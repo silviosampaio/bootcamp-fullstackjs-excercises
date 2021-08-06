@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try Catch</title>
+  </head>
+  <body></body>
+  <script>
+    class MyCustomError extends Error {
+      constructor(options) {
+        super();
+        this.errors = options.errors;
+        this.name = 'MyCustomError';
+      }
+    }
+
+    try {
+      throw new MyCustomError({
+        errors: ['Error 1', 'Error 2'],
+      });
+    } catch (err) {
+      console.log(err.name);
+      console.log(err.errors);
+      console.log(err.stack);
+    }
+  </script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Events</title>
+  </head>
+  <body>
+    <button id="btn1">Sem parametros</button>
+    <button id="btn2">Com parametros</button>
+  </body>
+  <script>
+    const $btn1 = document.getElementById('btn1');
+    const $btn2 = document.getElementById('btn2');
+
+    // new Event(name)
+    // sem parâmetros
+    const eventNoParams = new Event('eventoSemParametros');
+
+    // new CustomEvent(name, { detail: '' })
+    const eventParams = new CustomEvent('eventoComParametros', {
+      detail: { param: 'teste' },
+    });
+
+    // DISPATCH EVENT
+    $btn1.addEventListener('click', () =>
+      document.dispatchEvent(eventNoParams)
+    );
+
+    $btn2.addEventListener('click', () => document.dispatchEvent(eventParams));
+
+    // EVENT LISTENERS
+    document.addEventListener('eventoSemParametros', () => {
+      alert('eventoSemParametros');
+    });
+    document.addEventListener('eventoComParametros', (e) => {
+      console.log(e.detail);
+    });
+  </script>
+</html>

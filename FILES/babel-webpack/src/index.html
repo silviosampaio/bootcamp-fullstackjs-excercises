@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Game</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      #game {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        background-color: black;
+      }
+
+      #snake {
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        position: relative;
+        left: 0px;
+        top: 0px;
+      }
+
+      #score,
+      #speed {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="score">Pontuação: 0</h1>
+    <h5 id="speed">Velocidade: 5</h5>
+    <div id="game">
+      <div id="snake"></div>
+    </div>
+    <script src="../dist/bundle.js"></script>
+  </body>
+</html>

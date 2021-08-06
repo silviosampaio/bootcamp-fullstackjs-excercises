@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flex Items</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        /* STYLE */
+        background-color: lightgray;
+        border: 5px dashed #000;
+        padding: 20px;
+        height: 400px;
+      }
+
+      .flex-item {
+        /*flex-basis: 200px;
+				flex-grow: 1;
+        flex-shrink: 0;*/
+        flex: 1 0 200px;
+
+        /* STYLES */
+        background-color: #f1f1f1;
+        border: 2px solid #ccc;
+        height: 100px;
+      }
+
+      .order-first {
+        order: -1;
+        /*flex-grow: 2;*/
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item order-first">3</div>
+    </div>
+  </body>
+</html>

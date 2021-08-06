@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+      }
+
+      .sticky-box {
+        height: 1000px;
+        border: 2px solid #f90;
+      }
+
+      .blue {
+        background: blue;
+      }
+
+      .red {
+        background: red;
+      }
+
+      .green {
+        background: green;
+      }
+
+      .p-static {
+        position: static;
+      }
+
+      .p-relative {
+        position: relative;
+        top: 15px;
+        left: 15px;
+      }
+
+      .p-absolute {
+        position: absolute;
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+      }
+
+      .p-fixed {
+        position: fixed;
+        top: 0;
+      }
+
+      .p-sticky {
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Position Static</h1>
+    <div class="box blue p-static"></div>
+    <div
+      class="box green p-static"
+      style="margin-left: 10px; margin-top: 50px"
+    ></div>
+    <div class="box red p-static"></div>
+    <hr />
+    <h1>Position Relative</h1>
+    <div class="box blue p-static"></div>
+    <div class="box green p-relative"></div>
+    <div class="box red p-static"></div>
+    <hr />
+    <h1>Position Absolute</h1>
+    <div class="box blue p-static"></div>
+    <div class="box green p-absolute"></div>
+    <div class="box red p-static" style="margin-left: 30px"></div>
+    <hr />
+    <h1>Position Fixed</h1>
+    <div class="box blue p-static"></div>
+    <div class="box green p-fixed"></div>
+    <div class="box red p-static"></div>
+    <hr />
+    <h1>Position Sticky</h1>
+    <div class="sticky-box">
+      <div class="box blue p-sticky"></div>
+    </div>
+    <div class="sticky-box">
+      <div class="box red p-sticky"></div>
+    </div>
+    <div class="sticky-box">
+      <div class="box green p-sticky"></div>
+    </div>
+    <hr />
+  </body>
+</html>

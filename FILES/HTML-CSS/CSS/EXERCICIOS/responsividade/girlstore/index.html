@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css"
+    />
+    <!-- FAVICON -->
+    <title>Girl Store - Produtos</title>
+  </head>
+  <body>
+    <header class="bg-primary">
+      <div class="container-fluid bg-secondary d-none d-sm-block">
+        <div
+          class="container d-flex justify-content-center justify-content-lg-between py-3"
+        >
+          <ul class="d-flex list-inline m-0">
+            <li class="mr-3">
+              <a>
+                <small class="text-white">Fale com um atendente</small>
+              </a>
+            </li>
+            <li class="mr-3">
+              <a>
+                <small class="text-white">+55 51 3333-3333</small>
+              </a>
+            </li>
+            <li class="mr-3">
+              <a>
+                <small class="text-white">info@girlstore.com.br</small>
+              </a>
+            </li>
+          </ul>
+          <ul class="d-none d-lg-flex list-inline m-0">
+            <li class="mr-3">
+              <a>
+                <small class="text-white">Blog</small>
+              </a>
+            </li>
+            <li class="mr-3">
+              <a>
+                <small class="text-white">Sobre nós</small>
+              </a>
+            </li>
+            <li class="mr-3">
+              <a>
+                <small class="text-white">Carreiras</small>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container pt-5">
+        <div class="row d-none d-lg-flex align-items-center">
+          <div class="col-3">
+            <img src="./img/logo.png" class="img-fluid" />
+          </div>
+          <div class="col-6">
+            <input
+              type="text"
+              class="form-control p-3"
+              placeholder="Pesquise produtos, marcas..."
+            />
+          </div>
+          <div class="col-3 d-flex justify-content-end">
+            <a href="#" class="text-dark">
+              <span class="mdi mdi-account mdi-24px"></span>
+            </a>
+            <a href="#" class="text-dark ml-3">
+              <span class="mdi mdi-cart mdi-24px"></span>
+            </a>
+          </div>
+        </div>
+        <div class="row d-lg-none">
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <div style="width: 48px"></div>
+            <img src="./img/logo.png" />
+            <a href="#" class="text-dark ml-3">
+              <span class="mdi mdi-menu mdi-48px text-white"></span>
+            </a>
+          </div>
+          <div class="col-12">
+            <input
+              type="text"
+              class="form-control p-3"
+              placeholder="Pesquise produtos, marcas..."
+            />
+          </div>
+        </div>
+        <ul
+          id="menu-master"
+          class="list-inline d-flex justify-content-between m-0 py-4 py-lg-5"
+        >
+          <li><a href="#" class="text-dark">BEST SELLERS</a></li>
+          <li><a href="#" class="text-dark">NOVIDADES</a></li>
+          <li><a href="#" class="text-dark">VESTIDOS</a></li>
+          <li><a href="#" class="text-dark">LIQUIDAÇÃO</a></li>
+          <li class="menu-active"><a href="#" class="text-white">MARCAS</a></li>
+          <li><a href="#" class="text-dark">ACESSÓRIOS</a></li>
+          <li><a href="#" class="text-dark">EDITORIAIS</a></li>
+          <li><a href="#" class="text-dark">ESPORTES</a></li>
+        </ul>
+      </div>
+    </header>
+    <nav>
+      <ol class="breadcrumb">
+        <div class="container">
+          <li class="breadcrumb-item"><a href="#">MARCAS</a></li>
+          <li class="breadcrumb-item active" aria-current="page">MARCA XYZ</li>
+        </div>
+      </ol>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="my-5">Marca Xyz, um novo jeito de se vestir.</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 d-none d-md-block">
+          <h6><b>Categorias</b></h6>
+          <div class="d-flex justify-content-between text-muted mb-1">
+            <span>Categoria 1</span>
+            <span class="badge badge-primary">123</span>
+          </div>
+          <div class="d-flex justify-content-between text-muted mb-1">
+            <span>Categoria 2</span>
+            <span class="badge badge-primary">123</span>
+          </div>
+          <div class="d-flex justify-content-between text-muted mb-1">
+            <span>Categoria 3</span>
+            <span class="badge badge-primary">123</span>
+          </div>
+
+          <h6 class="mt-5"><b>Tamanhos</b></h6>
+          <div class="container p-0">
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                id="checkbox_pp"
+                class="form-check-input ml-0"
+              />
+
+              <label for="checkbox_pp" class="form-check-label ml-2 mt-1"
+                >PP</label
+              >
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                id="checkbox_p"
+                class="form-check-input ml-0"
+              />
+
+              <label for="checkbox_p" class="form-check-label ml-2 mt-1"
+                >P</label
+              >
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                id="checkbox_m"
+                class="form-check-input ml-0"
+              />
+
+              <label for="checkbox_m" class="form-check-label ml-2 mt-1"
+                >M</label
+              >
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                id="checkbox_g"
+                class="form-check-input ml-0"
+              />
+
+              <label for="checkbox_g" class="form-check-label ml-2 mt-1"
+                >G</label
+              >
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                id="checkbox_gg"
+                class="form-check-input ml-0"
+              />
+
+              <label for="checkbox_gg" class="form-check-label ml-2 mt-1"
+                >GG</label
+              >
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                id="checkbox_xg"
+                class="form-check-input ml-0"
+                checked
+              />
+
+              <label for="checkbox_xg" class="form-check-label ml-2 mt-1"
+                >XG</label
+              >
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                id="checkbox_unico"
+                class="form-check-input ml-0"
+              />
+
+              <label for="checkbox_unico" class="form-check-label ml-2 mt-1"
+                >Único</label
+              >
+            </div>
+          </div>
+
+          <h6 class="mt-5"><b>Avaliações</b></h6>
+          <div class="form-check mb-1">
+            <input
+              type="checkbox"
+              id="checkbox_start_5"
+              class="form-check-input ml-0"
+            />
+
+            <label for="checkbox_start_5" class="form-check-label ml-2">
+              <div>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+              </div>
+            </label>
+          </div>
+          <div class="form-check mb-1">
+            <input
+              type="checkbox"
+              id="checkbox_start_4"
+              class="form-check-input ml-0"
+            />
+
+            <label for="checkbox_start_4" class="form-check-label ml-2">
+              <div>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-muted"></span>
+              </div>
+            </label>
+          </div>
+          <div class="form-check mb-1">
+            <input
+              type="checkbox"
+              id="checkbox_start_3"
+              class="form-check-input ml-0"
+            />
+
+            <label for="checkbox_start_3" class="form-check-label ml-2">
+              <div>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-muted"></span>
+                <span class="mdi mdi-star text-muted"></span>
+              </div>
+            </label>
+          </div>
+          <div class="form-check mb-1">
+            <input
+              type="checkbox"
+              id="checkbox_start_2"
+              class="form-check-input ml-0"
+            />
+
+            <label for="checkbox_start_2" class="form-check-label ml-2">
+              <div>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-muted"></span>
+                <span class="mdi mdi-star text-muted"></span>
+                <span class="mdi mdi-star text-muted"></span>
+              </div>
+            </label>
+          </div>
+          <div class="form-check mb-1">
+            <input
+              type="checkbox"
+              id="checkbox_start_1"
+              class="form-check-input ml-0"
+            />
+
+            <label for="checkbox_start_1" class="form-check-label ml-2">
+              <div>
+                <span class="mdi mdi-star text-warning"></span>
+                <span class="mdi mdi-star text-muted"></span>
+                <span class="mdi mdi-star text-muted"></span>
+                <span class="mdi mdi-star text-muted"></span>
+                <span class="mdi mdi-star text-muted"></span>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-6 col-xl-4">
+              <div class="card p-3">
+                <img
+                  class="card-img-top"
+                  src="https://i.pinimg.com/originals/cb/ff/60/cbff604839785dfb18674186755d3a67.jpg"
+                />
+                <div class="card-body px-0 pb-0">
+                  <div>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-muted"></span>
+                  </div>
+                  <h5 class="card-title mb-1">Product Title</h5>
+                  <small class="card-text text-muted d-block mb-3">
+                    Space for a small product description
+                  </small>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <h6 class="mb-0"><b>R$ 29,90</b></h6>
+                      <span class="text-muted"><del>R$ 28,90</del></span>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-primary btn-sm">
+                        <text class="d-md-none d-lg-inline-block">
+                          Comprar agora
+                        </text>
+                        <span class="mdi mdi-cart d-lg-none"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="card p-3">
+                <img
+                  class="card-img-top"
+                  src="https://i.pinimg.com/originals/cb/ff/60/cbff604839785dfb18674186755d3a67.jpg"
+                />
+                <div class="card-body px-0 pb-0">
+                  <div>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-muted"></span>
+                  </div>
+                  <h5 class="card-title mb-1">Product Title</h5>
+                  <small class="card-text text-muted d-block mb-3">
+                    Space for a small product description
+                  </small>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <h6 class="mb-0"><b>R$ 29,90</b></h6>
+                      <span class="text-muted"><del>R$ 28,90</del></span>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-primary btn-sm">
+                        <text class="d-md-none d-lg-inline-block">
+                          Comprar agora
+                        </text>
+                        <span class="mdi mdi-cart d-lg-none"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="card p-3">
+                <img
+                  class="card-img-top"
+                  src="https://i.pinimg.com/originals/cb/ff/60/cbff604839785dfb18674186755d3a67.jpg"
+                />
+                <div class="card-body px-0 pb-0">
+                  <div>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-muted"></span>
+                  </div>
+                  <h5 class="card-title mb-1">Product Title</h5>
+                  <small class="card-text text-muted d-block mb-3">
+                    Space for a small product description
+                  </small>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <h6 class="mb-0"><b>R$ 29,90</b></h6>
+                      <span class="text-muted"><del>R$ 28,90</del></span>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-primary btn-sm">
+                        <text class="d-md-none d-lg-inline-block">
+                          Comprar agora
+                        </text>
+                        <span class="mdi mdi-cart d-lg-none"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="card p-3">
+                <img
+                  class="card-img-top"
+                  src="https://i.pinimg.com/originals/cb/ff/60/cbff604839785dfb18674186755d3a67.jpg"
+                />
+                <div class="card-body px-0 pb-0">
+                  <div>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-muted"></span>
+                  </div>
+                  <h5 class="card-title mb-1">Product Title</h5>
+                  <small class="card-text text-muted d-block mb-3">
+                    Space for a small product description
+                  </small>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <h6 class="mb-0"><b>R$ 29,90</b></h6>
+                      <span class="text-muted"><del>R$ 28,90</del></span>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-primary btn-sm">
+                        <text class="d-md-none d-lg-inline-block">
+                          Comprar agora
+                        </text>
+                        <span class="mdi mdi-cart d-lg-none"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="card p-3">
+                <img
+                  class="card-img-top"
+                  src="https://i.pinimg.com/originals/cb/ff/60/cbff604839785dfb18674186755d3a67.jpg"
+                />
+                <div class="card-body px-0 pb-0">
+                  <div>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-muted"></span>
+                  </div>
+                  <h5 class="card-title mb-1">Product Title</h5>
+                  <small class="card-text text-muted d-block mb-3">
+                    Space for a small product description
+                  </small>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <h6 class="mb-0"><b>R$ 29,90</b></h6>
+                      <span class="text-muted"><del>R$ 28,90</del></span>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-primary btn-sm">
+                        <text class="d-md-none d-lg-inline-block">
+                          Comprar agora
+                        </text>
+                        <span class="mdi mdi-cart d-lg-none"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="card p-3">
+                <img
+                  class="card-img-top"
+                  src="https://i.pinimg.com/originals/cb/ff/60/cbff604839785dfb18674186755d3a67.jpg"
+                />
+                <div class="card-body px-0 pb-0">
+                  <div>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-warning"></span>
+                    <span class="mdi mdi-star text-muted"></span>
+                  </div>
+                  <h5 class="card-title mb-1">Product Title</h5>
+                  <small class="card-text text-muted d-block mb-3">
+                    Space for a small product description
+                  </small>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <h6 class="mb-0"><b>R$ 29,90</b></h6>
+                      <span class="text-muted"><del>R$ 28,90</del></span>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-primary btn-sm">
+                        <text class="d-md-none d-lg-inline-block">
+                          Comprar agora
+                        </text>
+                        <span class="mdi mdi-cart d-lg-none"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

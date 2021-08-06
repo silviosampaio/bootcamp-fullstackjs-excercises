@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      padding: 70px;
+    }
+    .one {
+      background-color: #f90;
+    }
+    .two {
+      background-color: red;
+    }
+    .tree {
+      background-color: blueviolet;
+    }
+  </style>
+  <body>
+    <div class="one">
+      <div class="two">
+        <div class="tree"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.querySelectorAll('div').forEach(($el) => {
+      $el.addEventListener(
+        'click',
+        function (e) {
+          console.log(this.classList.value);
+          e.stopPropagation();
+        },
+        {
+          //capture: true,
+        }
+      );
+    });
+  </script>
+</html>

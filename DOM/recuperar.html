@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM HTML</title>
+  </head>
+  <body>
+    <h1 id="titulo">Título com ID</h1>
+    <h1>Título sem ID</h1>
+    <h1 class="texto">Título com classe</h1>
+    <span class="texto">Span Class Text</span>
+  </body>
+  <script>
+    // document.getElementById
+    const $h1Titulo = document.getElementById('titulo');
+
+    // document.getElementsByTagName
+    const $tagsH1 = document.getElementsByTagName('h1');
+
+    // document.getElementsByClassName
+    const $classElements = document.getElementsByClassName('texto');
+
+    //
+    const $h1Selector = document.querySelectorAll('.texto');
+
+    /*
+    console.log($h1Titulo);
+    console.log($tagsH1);
+    console.log($classElements);
+		*/
+
+    console.log($h1Selector);
+  </script>
+</html>

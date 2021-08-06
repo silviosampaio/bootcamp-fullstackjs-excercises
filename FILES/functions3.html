@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções Compostas</title>
+  </head>
+  <body></body>
+  <script>
+    async function bootstraping() {
+      async function ligarHd() {
+        // LÓGICA DA FUNÇÃO
+        console.log('LIGAR O HD');
+        return true;
+      }
+
+      async function acharSO() {
+        // LÓGICA DA FUNÇÃO
+        console.log('ACHAR O SISTEMA OPERACIONAL');
+        return true;
+      }
+
+      async function ativarDrivers() {
+        console.log('ATIVAR DRIVERS');
+        // LÓGICA DA FUNÇÃO
+        return true;
+      }
+
+      async function exibirLogin() {
+        // LÓGICA DA FUNÇÃO
+        await ativarDrivers();
+        // DEPOIS DA FUNÇÃO RETORNAR ALGUMA COSIA
+        console.log('PODE FAZER LOGIN');
+        return 'PODE FAZER LOGIN';
+      }
+
+      await ligarHd();
+      await acharSO();
+      return await exibirLogin();
+    }
+
+    bootstraping();
+  </script>
+</html>

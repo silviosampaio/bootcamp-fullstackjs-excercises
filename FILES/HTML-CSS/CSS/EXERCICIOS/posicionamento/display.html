@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Display</title>
+    <style>
+      .d-inline {
+        display: inline;
+        background-color: red;
+        height: 100px; /* NÃO FUNCIONA */
+        width: 100px; /* NÃO FUNCIONA */
+      }
+
+      .d-block {
+        display: block;
+        background-color: red;
+        margin-bottom: 5px;
+        height: 100px;
+        width: 100px;
+      }
+
+      .d-inline-block {
+        display: inline-block;
+        background-color: red;
+        margin-bottom: 5px;
+        height: 100px;
+        width: 100px;
+      }
+
+      .d-none {
+        display: none;
+        background-color: red;
+        margin-bottom: 5px;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Display Inline</h1>
+    <div class="d-inline">Display</div>
+    <div class="d-inline">Display inline 2</div>
+    <div class="d-inline">Display inline 3</div>
+    <hr />
+    <h1>Display Block</h1>
+    <div class="d-block">Display</div>
+    <div class="d-block">Display inline 2</div>
+    <div class="d-block">Display inline 3</div>
+    <hr />
+    <h1>Display Inline-Block</h1>
+    <div class="d-inline-block">Display</div>
+    <div class="d-inline-block">Display</div>
+    <div class="d-inline-block">Display</div>
+    <hr />
+    <h1>Display None</h1>
+    <div class="d-none">Display</div>
+    <div class="d-none">Display</div>
+    <div class="d-none">Display</div>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,6 @@
+.box {
+  -webkit-print-color-adjust: exact;
+  background-color: yellow;
+  width: 500px;
+  margin-top: 300px;
+}

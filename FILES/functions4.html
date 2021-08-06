@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body></body>
+  <script>
+    /*function multiplica(numero1 = 0, numero2 = 1) {
+      console.log(numero1, numero2);
+      console.log(numero1 * numero2);
+      console.log('----');
+    }*/
+
+    // (parametro1, prametro2, ...) => { @TODO }
+
+    const multiplica = (numero1 = 0, numero2 = 1) => numero1 * numero2;
+
+    const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const resultados = numeros.map((numero, index) =>
+      multiplica(numero, index)
+    );
+
+    console.log(resultados);
+  </script>
+</html>

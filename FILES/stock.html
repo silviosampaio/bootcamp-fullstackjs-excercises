@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Consumer x Producer</title>
+  </head>
+  <body></body>
+  <script>
+    let stock = [];
+
+    const producer = () => {
+      stock.push(Math.random() * 100);
+      console.log('producer', stock.length);
+      setTimeout(producer, Math.ceil(Math.random() * 3000));
+    };
+
+    const consumer = () => {
+      if (stock.length === 0) {
+        console.log('Não foi possível consumir');
+      } else {
+        stock.pop();
+        console.log('consumer', stock.length);
+      }
+      setTimeout(consumer, Math.ceil(Math.random() * 3000));
+    };
+
+    // init
+    producer();
+    consumer();
+  </script>
+</html>

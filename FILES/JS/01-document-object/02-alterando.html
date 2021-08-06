@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alterando Elementos</title>
+  </head>
+  <body>
+    <div
+      id="box"
+      contenteditable="true"
+      style="width: 200px; height: 200px; background-color: aqua; padding: 20px"
+    >
+      <h1>Conteúdo da Div</h1>
+    </div>
+
+    <script>
+      const box = document.getElementById('box');
+
+      // element.innerHTML =  new html content
+      const conteudo = box.innerHTML;
+      box.innerHTML = `${conteudo}<h2>Conteúdo Alterado</h2>`;
+
+      // element.setAttribute(attribute, value)
+      console.log(box.contentEditable);
+      box.setAttribute('contenteditable', false);
+
+      // element.style.property = new style
+      box.style.backgroundColor = 'red';
+    </script>
+  </body>
+</html>

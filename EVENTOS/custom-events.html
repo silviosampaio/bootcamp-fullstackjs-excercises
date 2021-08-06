@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Events</title>
+  </head>
+  <body>
+    <button id="btn1">Sem parametros</button>
+    <button id="btn2">Com parametros</button>
+  </body>
+  <script>
+    const $btn1 = document.getElementById('btn1');
+    const $btn2 = document.getElementById('btn2');
+
+    // SEM PARÂMETROS
+    const eventNoParams = new Event('@userLogoff');
+
+    // COM PARÂMETROS
+    const eventParams = new CustomEvent('@sendEmail', {
+      detail: {
+        _id: new Date().getTime(),
+        assunto: '....',
+        conteudo: '...',
+        enviado: false,
+        data: new Date(),
+        to: ['....', '...', '...'],
+      },
+    });
+
+    // DISPARAR O EVENTOS
+    $btn1.addEventListener('click', () => {
+      document.dispatchEvent(eventNoParams);
+    });
+
+    $btn2.addEventListener('click', () => {
+      document.dispatchEvent(eventParams);
+    });
+
+    // ESCUTAR O EVENTOS
+    document.addEventListener('@userLogoff', (e) => {
+      console.log(e);
+    });
+
+    document.addEventListener('@sendEmail', (e) => {
+      console.log(e.detail);
+    });
+  </script>
+</html>

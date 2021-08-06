@@ -1,0 +1,49 @@
+h1,
+h2,
+h3 {
+  font-family: 'Abhaya Libre';
+}
+
+.badge {
+  line-height: normal;
+}
+
+input[type='checkbox'] {
+  zoom: 1.4;
+}
+
+.form-check span.mdi-star,
+.card-body span.mdi-star {
+  font-size: 23px;
+  margin-right: -8px;
+  display: inline-block;
+  margin-top: -5px;
+}
+
+.card {
+  border-width: 2.5px;
+  margin-bottom: 20px;
+}
+
+.menu-active::after {
+  font-family: 'Material Design Icons';
+  content: '\F0140';
+  color: #fff;
+}
+
+.table-infos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  font-size: 14px;
+}
+
+.table-borderless td,
+.table-borderless td {
+  border: 0;
+}
+
+.table-borderless td {
+  padding-top: 0;
+  padding-bottom: 0;
+}

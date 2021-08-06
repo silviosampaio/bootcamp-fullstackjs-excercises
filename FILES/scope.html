@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body></body>
+  <script>
+    /*let nome = 'Silvio';
+    function imprimeNome() {
+      console.log(nome);
+      var sobrenome = 'Sampaio';
+    }
+
+    imprimeNome();
+
+    function soma() {
+      const a = 10;
+      const b = 10;
+      console.log(a, b);
+    }
+
+    function multiplica() {
+      const a = 3;
+      const b = 5;
+      console.log(a, b);
+    }
+
+    soma();
+    multiplica();*/
+
+    /*
+    const teste = 'Teste';
+
+    if (true) {
+      let nome = 'Silvio';
+      const sobrenome = 'Sampaio';
+      var idade = 24;
+
+      console.log(nome, sobrenome, idade, teste);
+    }
+
+    console.log(idade);*/
+
+    function vo() {
+      const nomeVo = 'Ziguiomar';
+      function filho() {
+        const nomeFilho = 'Rosângela';
+
+        function neto() {
+          const nomeNeto = 'Silvio';
+          console.log(nomeVo, nomeFilho, nomeNeto);
+        }
+
+        console.log(nomeNeto);
+        neto();
+      }
+      filho();
+    }
+
+    vo();
+  </script>
+</html>

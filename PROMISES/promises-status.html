@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises Status</title>
+  </head>
+  <body></body>
+  <script>
+    const promiseResult = new Promise((resolve, reject) => {
+      // TAREFA ASSINCRONA
+      // CONSULTA, OU QUALQUER TAREFA QUE SIMBOLIZE A "PROMESSA"
+      setTimeout(() => {
+        if (12 > 10) {
+          //Promise.resolve('Numero é maior que 10');
+          resolve('Numero é maior que 10');
+        } else {
+          //Promise.reject('Número é menor que 10');
+          reject('Numero é menor que 10');
+        }
+      }, 5000);
+    });
+
+    console.log(promiseResult);
+
+    promiseResult
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => {
+        console.log(promiseResult);
+      });
+  </script>
+</html>

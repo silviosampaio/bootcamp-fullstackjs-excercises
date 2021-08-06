@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capture e Bubbling</title>
+    <style>
+      div {
+        padding: 70px;
+      }
+
+      .one {
+        background-color: #f90;
+      }
+
+      .two {
+        background-color: red;
+      }
+
+      .three {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div class="two">
+        <div class="three"></div>
+      </div>
+    </div>
+    <script>
+      const $divs = document.querySelectorAll('div');
+      $divs.forEach(($div) => {
+        $div.addEventListener('click', function () {
+          console.log(this.classList.value);
+        });
+      });
+    </script>
+  </body>
+</html>

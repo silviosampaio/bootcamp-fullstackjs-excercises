@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar</title>
+  </head>
+  <body>
+    <div
+      id="box"
+      contenteditable="false"
+      class="silvio"
+      style="width: 200px; height: 200px; background-color: aqua; padding: 20px"
+    >
+      <h1>Conteúdo da Div</h1>
+    </div>
+  </body>
+  <script>
+    const $box = document.getElementById('box');
+
+    // elment.innerHTML
+    //$box2.innerText = $box.innerText;
+    //$box.innerHTML = '<h1 style="color: red;">Silvio</h1>';
+
+    setTimeout(() => {
+      $box.setAttribute('contenteditable', 'true');
+      $box.setAttribute('class', 'juliana');
+      $box.innerText = `A cor antiga é ${$box.style.backgroundColor}`;
+      $box.style.backgroundColor = '#f90';
+    }, 3 * 1000);
+  </script>
+</html>

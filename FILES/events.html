@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      span {
+        display: block;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <span>Clique-me</span>
+    <span>Clique-me 2</span>
+  </body>
+  <script>
+    const showAlert = (event, el) => {
+      console.log(event, el);
+    };
+
+    document.querySelectorAll('span').forEach((el) => {
+      el.addEventListener('click', (event) => {
+        console.log(event);
+      });
+    });
+  </script>
+</html>

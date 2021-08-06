@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent, Child, Sibling</title>
+  </head>
+  <body>
+    <ul id="lista">
+      <li>Maçã</li>
+      <li>Pêra</li>
+      <li>Melancia</li>
+    </ul>
+    <script>
+      //const $lista = document.getElementById('lista');
+
+      // FILHOS
+      /*const $filhos = $lista.children;
+      for (let i = 0; i < $filhos.length; i++) {
+        console.log($filhos[i].innerHTML);
+      }*/
+
+      //const $pera = document.getElementById('pera');
+      //const $listaElement = $pera.parentElement;
+      //const $listaNode = $pera.parentElement;
+
+      //console.log($listaElement);
+      // console.log($listaNode);
+
+      const $lista = document.getElementById('lista');
+      const [$fruta1, $fruta2, $fruta3] = $lista.children; // [li, li, li]
+
+      console.log(`Fruta 1: ${$fruta2.previousElementSibling.innerHTML}`);
+      console.log(`Fruta 3: ${$fruta2.nextElementSibling.innerHTML}`);
+
+      console.log($fruta2.previousElementSibling);
+      console.log($fruta2.nextElementSibling);
+
+      console.log($fruta2.nodeName);
+      console.log($fruta2.nodeType);
+    </script>
+  </body>
+</html>

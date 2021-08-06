@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h1>O resultado é: 0</h1>
+    <div id="input-container">
+      <input type="number" placeholder="Número 1" />
+      <input type="number" placeholder="Número 2" />
+    </div>
+    <br />
+    <button>Calcular Resultado</button>
+  </body>
+  <script>
+    // VARIABLES
+    const $button = document.querySelector('button');
+    const $output = document.querySelector('h1');
+
+    // FUNCTIONS
+    const calculate = () => {
+      const $inputs = document.querySelectorAll('input[type=number]');
+      const result = Array.from($inputs).reduce((total, input) => {
+        return total + parseInt(input.value);
+      }, 0);
+
+      $output.innerText = `O resultado é ${result}`;
+    };
+
+    const addInput = () => {
+      const $container = document.getElementById('input-container');
+      const inputIndex = $container.children.length + 1;
+
+      const $newInput = document.createElement('input');
+      $newInput.type = 'number';
+      $newInput.placeholder = `Número ${inputIndex}`;
+
+      $container.appendChild($newInput);
+    };
+
+    // EVENT LISTENERS
+    $button.addEventListener('click', calculate);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'i') {
+        addInput();
+      }
+    });
+  </script>
+</html>

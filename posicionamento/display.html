@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .d-block {
+        display: block;
+        height: 100px;
+        background-color: red;
+        margin-bottom: 5px;
+      }
+
+      .d-inline {
+        display: inline;
+        background-color: red;
+        height: 100px; /* NÃO FUNCIONA */
+        width: 100px; /* NÃO FUNCIONA */
+      }
+
+      .d-inline-block {
+        display: inline-block;
+        background-color: red;
+        margin-bottom: 5px;
+        height: 100px;
+        width: 100px;
+      }
+
+      .d-none {
+        display: none;
+        background-color: red;
+        margin-bottom: 5px;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Display Block</h1>
+    <div class="d-block"></div>
+    <div class="d-block"></div>
+    <hr />
+
+    <h1>Display Inline</h1>
+    <div class="d-inline">1</div>
+    <div class="d-inline">2</div>
+    <div class="d-inline">3</div>
+    <hr />
+
+    <h1>Display Inline-Block</h1>
+    <div class="d-inline-block">1</div>
+    <div class="d-inline-block">2</div>
+    <div class="d-inline-block">3</div>
+
+    <hr />
+    <h1>Display None</h1>
+    <div class="d-none"></div>
+    <hr />
+  </body>
+</html>

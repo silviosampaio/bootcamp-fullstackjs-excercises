@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body>
+    <h1 id="loading">Carregando...</h1>
+    <div id="dogs"></div>
+    <input type="number" value="4" placeholder="Quantidade" id="qtd" />
+    <button id="loadmore">Carregar mais</button>
+  </body>
+  <script>
+    const $loadmoreButton = document.getElementById('loadmore');
+    const $qtdInput = document.getElementById('qtd');
+
+    const loadDogs = async (qtd) => {
+      try {
+        document.getElementById('loading').innerText = 'Carregando...';
+
+        const response = await fetch(
+          `https://dog.ceo/api/breeds/image/random/${qtd}`
+        );
+
+        const data = await response.json();
+        return data.message;
+      } catch (err) {
+        return err.message;
+      }
+    };
+
+    const addDogs = (dogs) => {
+      const $dogsContainer = document.getElementById('dogs');
+      for (let dog of dogs) {
+        const $image = document.createElement('img');
+        $image.src = dog;
+        $image.style.width = '100px';
+        $image.style.height = '100px';
+
+        $dogsContainer.appendChild($image);
+      }
+
+      document.getElementById('loading').innerText = 'Imagens Carregadas';
+    };
+
+    const getDogs = async (qtd) => {
+      /*loadDogs(qtd)
+        .then((dogs) => addDogs(dogs))
+        .catch((err) => console.log(err));*/
+
+      const dogs = await loadDogs(qtd);
+      addDogs(dogs);
+    };
+
+    getDogs(4);
+    $loadmoreButton.addEventListener('click', () => getDogs($qtdInput.value));
+  </script>
+</html>

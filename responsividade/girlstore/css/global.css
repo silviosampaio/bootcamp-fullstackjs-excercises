@@ -1,0 +1,61 @@
+:root {
+  --primary-dark: #5f398d;
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+.menu-active::after {
+  font-family: 'Material Design Icons';
+  content: '\F0140';
+  color: #fff;
+  -webkit-font-feature-settings: 'liga';
+}
+
+h1,
+h2,
+h3 {
+  font-family: serif;
+}
+
+.card-img-top,
+.card {
+  border-radius: 5px;
+}
+
+.card {
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+.card .mdi-star,
+.form-check span.mdi-star {
+  font-size: 23px;
+  margin-right: -8px;
+}
+
+.badge {
+  line-height: normal;
+}
+
+input[type='checkbox'] {
+  zoom: 1.4;
+}
+
+.table-infos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  font-size: 14px;
+}
+
+.table-borderless td,
+.table-borderless th {
+  border: 0;
+}
+
+.table-borderless td {
+  padding-top: 0;
+  padding-bottom: 0;
+}

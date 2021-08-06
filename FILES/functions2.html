@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions #02</title>
+  </head>
+  <body></body>
+  <script>
+    let cep = '9999999';
+
+    function getEnderecoByCep(cep, callback = function () {}, type) {
+      const endereco = {
+        endereco: 'Tua teste',
+        bairro: 'Bairro Teste',
+        cidade: 'Cidade Teste',
+      };
+
+      return callback(endereco, type);
+    }
+
+    /*
+      function formatUppercase(endereco) {
+        return Object.keys(endereco).map((key) => endereco[key].toUpperCase());
+      }
+
+      function formatLowerCase(endereco) {
+        return Object.keys(endereco).map((key) => endereco[key].toLowerCase());
+      }*/
+
+    function formatCase(endereco, type = 'toLowerCase') {
+      return Object.keys(endereco).map((key) => endereco[key][type]());
+    }
+
+    //const resultUpperCase = getEnderecoByCep(cep, formatUppercase);
+    //const resultLowerCase = getEnderecoByCep(cep, formatLowerCase);
+
+    //console.log(resultUpperCase);
+    //console.log(resultLowerCase);
+
+    const result = getEnderecoByCep(cep, formatCase, 'toUpperCase');
+    console.log(result);
+  </script>
+</html>

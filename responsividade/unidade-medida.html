@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidade Medida</title>
+    <style>
+      .box {
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .blue {
+        background: blue;
+      }
+
+      .px {
+        width: 5px;
+        height: 5px;
+      }
+
+      .in {
+        width: 5in;
+        height: 5in;
+      }
+
+      .cm {
+        width: 5cm;
+        height: 5cm;
+      }
+
+      .mm {
+        width: 5mm;
+        height: 5mm;
+      }
+
+      .pt {
+        width: 5pt;
+        height: 5pt;
+      }
+
+      .pc {
+        width: 5pc;
+        height: 5pc;
+        transition: 5s;
+      }
+
+      .percentage {
+        width: 50%;
+        height: 100px;
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .rem {
+        font-size: 2rem;
+        display: block;
+      }
+
+      .em {
+        font-size: 1.2em;
+        display: block;
+      }
+
+      .vw {
+        width: 30vw;
+        height: 100%;
+      }
+
+      .transition:hover {
+        background: blueviolet;
+        transition: 5s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Absolutas (px, in, cm, mm, pt, pc)</h1>
+    <div class="box px red"></div>
+    <div class="box in green"></div>
+    <div class="box cm blue"></div>
+    <div class="box mm red"></div>
+    <div class="box pt blue"></div>
+    <div class="box pc green"></div>
+    <hr />
+
+    <h1>Relativas (%, em, rem, vw/vh)</h1>
+    <div class="percentage red">
+      <div class="percentage green">
+        <div class="percentage blue"></div>
+      </div>
+    </div>
+    <br />
+    <span class="rem">Meu Texto REM</span>
+    <span class="rem">Meu Texto REM</span>
+    <span class="rem">Meu Texto REM</span>
+    <br />
+    <span class="em"
+      >Meu Texto EM
+      <span class="em"
+        >Meu Texto EM
+        <span class="em">Meu Texto EM</span>
+      </span>
+    </span>
+    <br />
+    <div class="percentage red">
+      <div class="vw green"></div>
+    </div>
+    <br />
+    <div class="percentage red">
+      <div class="vw green"></div>
+    </div>
+    <br />
+    <div class="box pc green transition"></div>
+  </body>
+</html>

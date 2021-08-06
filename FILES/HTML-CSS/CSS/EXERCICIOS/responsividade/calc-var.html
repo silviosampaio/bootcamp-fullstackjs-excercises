@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc Var</title>
+    <style>
+      :root {
+        --width: 200px;
+        --height: 50px;
+        --red: red;
+        --green: green;
+        --blue: blue;
+        --font-family: 'Roboto';
+      }
+
+      .tamanho-total {
+        width: var(--width);
+        height: var(--height);
+      }
+
+      .tamanho-metade {
+        width: calc(var(--width) / 2);
+        height: var(--height);
+      }
+
+      .tamanho-quarto {
+        width: calc(var(--width) / 4);
+        height: var(--height);
+      }
+
+      .red {
+        background-color: var(--red);
+      }
+
+      .green {
+        background-color: var(--green);
+      }
+
+      .blue {
+        background-color: var(--blue);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tamanho-total red"></div>
+    <div class="tamanho-metade green"></div>
+    <div class="tamanho-quarto blue"></div>
+  </body>
+</html>

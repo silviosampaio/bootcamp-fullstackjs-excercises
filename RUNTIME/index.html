@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumer x Producer</title>
+  </head>
+  <body>
+    <div id="log"></div>
+  </body>
+  <script>
+    let stock = [];
+
+    const producer = () => {
+      stock.push(Math.random() * 100);
+
+      const $span = document.createElement('span');
+      $span.innerText = `Producer ${stock.length}`;
+      $span.style.display = 'block';
+      $span.style.color = 'green';
+
+      document.getElementById('log').appendChild($span);
+
+      setTimeout(producer, Math.ceil(Math.random() * 3000));
+    };
+
+    const consumer = () => {
+      const $span = document.createElement('span');
+      $span.style.display = 'block';
+
+      if (stock.length === 0) {
+        $span.style.color = 'red';
+        $span.innerText = `Não foi possível consumir`;
+      } else {
+        stock.pop();
+
+        $span.style.color = 'blue';
+        $span.innerText = `Consumer ${stock.length}`;
+      }
+
+      document.getElementById('log').appendChild($span);
+
+      setTimeout(consumer, Math.ceil(Math.random() * 3000));
+    };
+
+    producer();
+    consumer();
+  </script>
+</html>
