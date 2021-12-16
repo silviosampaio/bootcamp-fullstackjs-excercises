@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugger Chrome</title>
+  </head>
+  <body>
+    <h1 id="resultTitle">Debugger Chrome</h1>
+    <button onclick="getSoma()">Clique-me</button>
+  </body>
+  <script>
+    let result = 0;
+
+    const mathOperation = (num1, num2, operation) => {
+      switch (operation) {
+        case "+": {
+          return num1 + num2;
+        }
+        case "-": {
+          return num1 - num2;
+        }
+        case "*": {
+          return num1 * num2;
+        }
+        case "/": {
+          return num1 / num2;
+        }
+      }
+    };
+
+    const getSoma = async () => {
+      result = mathOperation(1, 2, "+");
+      document.getElementById("resultTitle").innerText = result;
+    };
+
+    getSoma();
+    getSoma2();
+  </script>
+</html>
